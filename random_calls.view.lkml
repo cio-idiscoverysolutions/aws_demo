@@ -144,6 +144,11 @@ view: random_calls {
     sql_latitude: ${lat2} ;;
     sql_longitude: ${lon2} ;;
   }
+  dimension: status {
+    type: string
+    sql: ${TABLE}.status ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [fullname]
