@@ -139,6 +139,11 @@ view: random_calls {
     sql: ${TABLE}.street ;;
   }
 
+  dimension: person_location {
+    type: location
+    sql_latitude: ${lat2} ;;
+    sql_longitude: ${lon2} ;;
+  }
   measure: count {
     type: count
     drill_fields: [fullname]
